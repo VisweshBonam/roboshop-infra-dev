@@ -1,0 +1,1 @@
+{"Modules":[{"Key":"","Source":"","Dir":"."},{"Key":"component","Source":"git::https://github.com/VisweshBonam/terraform-aws-roboshop.git?ref=main","Dir":".terraform/modules/component"}]}

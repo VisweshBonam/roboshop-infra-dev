@@ -534,3 +534,89 @@ resource "aws_security_group_rule" "rabbitmq_payment" {
   security_group_id = module.rabbitmq.sg_id
 }
 
+resource "aws_security_group_rule" "frontend_bastian" {
+  type = "ingress"
+  from_port = 22
+  to_port = 22
+  protocol = "tcp"
+  source_security_group_id = module.bastian.sg_id
+  security_group_id = module.frontend.sg_id
+}
+
+
+resource "aws_security_group_rule" "cart_bastian" {
+  type = "ingress"
+  from_port = 22
+  to_port = 22
+  protocol = "tcp"
+  source_security_group_id = module.bastian.sg_id
+  security_group_id = module.cart.sg_id
+}
+
+resource "aws_security_group_rule" "shipping_bastian" {
+  type = "ingress"
+  from_port = 22
+  to_port = 22
+  protocol = "tcp"
+  source_security_group_id = module.bastian.sg_id
+  security_group_id = module.shipping.sg_id
+}
+
+resource "aws_security_group_rule" "payment_bastian" {
+  type = "ingress"
+  from_port = 22
+  to_port = 22
+  protocol = "tcp"
+  source_security_group_id = module.bastian.sg_id
+  security_group_id = module.payment.sg_id
+}
+
+resource "aws_security_group_rule" "user_bastian" {
+  type = "ingress"
+  from_port = 22
+  to_port = 22
+  protocol = "tcp"
+  source_security_group_id = module.bastian.sg_id
+  security_group_id = module.user.sg_id
+}
+
+
+
+resource "aws_security_group_rule" "mongodb_bastian" {
+  type = "ingress"
+  from_port = 22
+  to_port = 22
+  protocol = "tcp"
+  source_security_group_id = module.bastian.sg_id
+  security_group_id = module.mongodb.sg_id
+}
+
+
+resource "aws_security_group_rule" "redis_bastian" {
+  type = "ingress"
+  from_port = 22
+  to_port = 22
+  protocol = "tcp"
+  source_security_group_id = module.bastian.sg_id
+  security_group_id = module.redis.sg_id
+}
+
+
+resource "aws_security_group_rule" "mysql_bastian" {
+  type = "ingress"
+  from_port = 22
+  to_port = 22
+  protocol = "tcp"
+  source_security_group_id = module.bastian.sg_id
+  security_group_id = module.mysql.sg_id
+}
+
+
+resource "aws_security_group_rule" "rabbitmq_bastian" {
+  type = "ingress"
+  from_port = 22
+  to_port = 22
+  protocol = "tcp"
+  source_security_group_id = module.bastian.sg_id
+  security_group_id = module.rabbitmq.sg_id
+}
